@@ -6,52 +6,52 @@ import http.client, urllib.parse
 import os
 from dotenv import load_dotenv
 
-# Ladda variablerna från .env-filen
+# Load variables from the .env file
 load_dotenv()
 
-# Skapa en logger-instans för denna modul
+# Create a logger instance for this module
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-# Skapa en fil-handler som loggar meddelanden till 'logfile.log'
+# Create a file handler that logs messages to 'logfile.log'
 file_handler = logging.FileHandler('logfile.log')
 file_handler.setLevel(logging.INFO)
 
-# Skapa en formatter för loggmeddelandena
+# Create a formatter for the log messages
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 
-# Lägg till handlern till logger-instansen
+# Add the handler to the logger instance
 logger.addHandler(file_handler)
 
-# API-URL och koordinater
+# API URL and coordinates
 API_URL = "https://api.met.no/weatherapi/locationforecast/2.0/complete.json"
 LATITUDE = 59.879698
 LONGITUDE = 17.634381
 
 def get_weather_data():
-    """Hämtar väderdata från YR:s API."""
+    """Fetches weather data from YR's API."""
     try:
-        logger.info("Försöker hämta väderdata från YR API...")
+        logger.info("Attempting to fetch weather data from YR API...")
         response = requests.get(
             API_URL,
             params={'lat': LATITUDE, 'lon': LONGITUDE},
             headers={'User-Agent': 'PythonAppForecastToClothing/1.0'}
         )
         response.raise_for_status()
-        logger.info("Väderdata hämtad framgångsrikt.")
+        logger.info("Weather data fetched successfully.")
         return response.json()
     except requests.exceptions.RequestException as e:
-        logger.error(f"Fel vid hämtning av väderdata: {e}")
+        logger.error(f"Error fetching weather data: {e}")
         return None
 
 def process_weather_data(data):
     """
-    Bearbetar väderdatan för tidsperioden 08:00-17:00 och genererar klädförslag.
-    Returnerar en sträng med rekommendationer.
+    Processes the weather data for the time period 08:00-17:00 and generates clothing suggestions.
+    Returns a string with the recommendations.
     """
     if not data or 'timeseries' not in data['properties']:
-        logger.warning("Ingen väderdata att bearbeta eller ogiltigt format.")
+        logger.warning("No weather data to process or invalid format.")
         return "Kunde inte hämta väderdata."
 
     recommendations = []
@@ -66,7 +66,7 @@ def process_weather_data(data):
     
     max_uv_index = 0
 
-    logger.info("Bearbetar väderdata för 08:00-17:00.")
+    logger.info("Processing weather data for 08:00-17:00.")
 
     for timeslot in data['properties']['timeseries']:
         time_str = timeslot['time']
@@ -98,10 +98,10 @@ def process_weather_data(data):
             if uv_index is not None and uv_index > max_uv_index:
                 max_uv_index = uv_index
     
-    # Generera klädförslag baserat på de sammanställda värdena
+    # Generate clothing suggestions based on the compiled values
     recommendations = []
     
-    # Rekommendationer baserade på både max och min
+    # Recommendations based on both max and min
     if max_temp >= 20 and min_temp >= 15:
         recommendations.append(f"Det blir varmt! Klä dig i shorts och t-shirt.")
     elif max_temp >= 20 and min_temp < 15:
@@ -113,7 +113,7 @@ def process_weather_data(data):
     elif max_temp < 5:
         recommendations.append(f"Det blir kallt. Ta varm jacka och överdragsbyxor.")
 
-    # Rekommendationer baserade enbart på min-temp
+    # Recommendations based solely on min-temp
     if min_temp <= 15 and min_temp > 7:
         recommendations.append("Det blir svalt. Ta med dunjacka och mössa.")
     if min_temp <= 7 and min_temp > 3:
@@ -123,11 +123,11 @@ def process_weather_data(data):
     elif min_temp <= 0:
         recommendations.append("Det blir kallt. Ta overall, mössa och dubbla vantar.")
 
-    # Rekommendation för regn
+    # Recommendation for rain
     if will_it_rain:
         recommendations.append(f"Det kan regna under dagen. Ta med regnkläder och stövlar.")
     
-    # Sammanfattning
+    # Summary
     total_regn = round(total_rain_amount, 1)
     min_total_regn = round(total_min_rain_amount, 1)
     max_total_regn = round(total_max_rain_amount, 1)
@@ -139,13 +139,13 @@ def process_weather_data(data):
                f"UV-index: {max_uv_index}\n"
                f"Nederbörd: {total_regn} mm ({min_total_regn} till {max_total_regn} mm)")
 
-    # Lägger ihop alla rekommendationer i en sträng 
+    # Join all recommendations into a string
     final_recommendation = "\n".join(recommendations) + summary
-    logger.info(f"Genererade rekommendationer: {final_recommendation}")
+    logger.info(f"Generated recommendations: {final_recommendation}")
     return final_recommendation
 
 def save_to_database(recommendation):
-    """Sparar dagens klädförslag till en SQLite-databas."""
+    """Saves today's clothing suggestion to a SQLite database."""
     try:
         conn = sqlite3.connect('weather_data.db')
         c = conn.cursor()
@@ -166,18 +166,18 @@ def save_to_database(recommendation):
         
         conn.commit()
         conn.close()
-        logger.info("Dagens rekommendation sparad i databasen.")
+        logger.info("Today's recommendation saved to the database.")
     except sqlite3.Error as e:
-        logger.error(f"Fel vid anslutning eller skrivning till databas: {e}")
+        logger.error(f"Error connecting to or writing to the database: {e}")
 
 def send_pushover_notification(message):
-    """Skickar ett meddelande via Pushover med hjälp av inbyggda moduler."""
-    # Läs nycklarna från miljövariablerna
+    """Sends a message via Pushover using built-in modules."""
+    # Read keys from environment variables
     APP_TOKEN = os.getenv("PUSHOVER_APP_TOKEN")
     USER_KEY = os.getenv("PUSHOVER_USER_KEY")
 
     if not APP_TOKEN or not USER_KEY:
-        logger.error("Pushover nycklar saknas i .env-filen.")
+        logger.error("Pushover keys are missing from the .env file.")
         return
 
     try:
@@ -192,17 +192,17 @@ def send_pushover_notification(message):
         response = conn.getresponse()
         
         if response.status == 200:
-            logger.info("Notis skickad framgångsrikt via Pushover.")
+            logger.info("Notification sent successfully via Pushover.")
         else:
-            logger.error(f"Kunde inte skicka notis. Statuskod: {response.status}")
+            logger.error(f"Could not send notification. Status code: {response.status}")
     except Exception as e:
-        logger.error(f"Kunde inte skicka notis via Pushover: {e}")
+        logger.error(f"Could not send notification via Pushover: {e}")
 
 if __name__ == "__main__":
-    logger.info("Programmet startas.")
+    logger.info("Program started.")
     weather_json = get_weather_data()
     if weather_json:
         recommendation_text = process_weather_data(weather_json)
         save_to_database(recommendation_text)
         send_pushover_notification(recommendation_text)
-    logger.info("Programmet avslutas.")
+    logger.info("Program finished.")
