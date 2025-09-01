@@ -204,3 +204,18 @@ Nederbörd: 0.0 mm (0.0 till 0.8 mm)
 2025-09-01 14:04:21,187 - __main__ - INFO - Dagens rekommendation sparad i databasen.
 2025-09-01 14:04:22,042 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
 2025-09-01 14:04:22,045 - __main__ - INFO - Programmet avslutas.
+2025-09-01 15:50:49,039 - __main__ - INFO - Program started.
+2025-09-01 15:50:49,039 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-01 15:50:49,758 - __main__ - INFO - Weather data fetched successfully.
+2025-09-01 15:50:49,766 - __main__ - INFO - Processing weather data for 08:00-17:00.
+2025-09-01 15:50:49,766 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Använd solskydd! UV-indexet blir högt (3.3).
+
+Dagens väderprognos:
+Max: 23.3°C
+Min: 17.0°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (0.0 till 0.9 mm)
+2025-09-01 15:50:49,789 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-01 15:50:50,581 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-01 15:50:50,582 - __main__ - INFO - Program finished.

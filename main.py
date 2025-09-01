@@ -123,6 +123,10 @@ def process_weather_data(data):
     elif min_temp <= 0:
         recommendations.append("Det blir kallt. Ta overall, mössa och dubbla vantar.")
 
+    # Recommendation for UV-index
+    if max_uv_index > 3:
+        recommendations.append(f"Använd solskydd!")
+      
     # Recommendation for rain
     if will_it_rain:
         recommendations.append(f"Det kan regna under dagen. Ta med regnkläder och stövlar.")
