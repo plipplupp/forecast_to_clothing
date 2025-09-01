@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignore the virtual environment
+venv/
+
+# Ignore the .env file with sensitive information
+.env

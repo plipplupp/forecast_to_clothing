@@ -1,0 +1,2 @@
+@echo off
+"C:\Users\Dator\Documents\Data_Science\08_Advanced_Python\forecast_to_clothing\venv\Scripts\python.exe" "C:\Users\Dator\Documents\Data_Science\08_Advanced_Python\forecast_to_clothing\main.py"

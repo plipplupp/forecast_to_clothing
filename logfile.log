@@ -1,0 +1,206 @@
+2025-08-29 15:29:29,170 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:29:29,170 - main - INFO - Genererade rekommendationer: Det blir varmt! Max 26.0°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (5.0), smörj in dig med solkräm och ta med en keps.
+2025-08-29 15:29:29,173 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:29:29,173 - main - INFO - Genererade rekommendationer: Det blir svalt. Max 12.0°C. Ta med en varm jacka och mössa. Det kan regna under dagen. Ta med regnkläder och stövlar. Total mängd: 3.7 mm. Minst totalt 1.5 mm och som mest 5.0 mm under dagen.
+2025-08-29 15:29:29,320 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:29:29,321 - main - INFO - Genererade rekommendationer: Det blir kallt. Max 1.0°C. Det blir kallt (min -2.0°C), ta overall, mössa och dubbla vantar.
+2025-08-29 15:38:31,562 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:38:31,562 - main - INFO - Genererade rekommendationer: Det blir varmt! Max 26.0°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (5.0), smörj in dig med solkräm och ta med en keps.
+2025-08-29 15:38:31,565 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:38:31,566 - main - INFO - Genererade rekommendationer: Det blir svalt. Max 12.0°C. Ta med dunjacka och mössa. Det kan regna under dagen. Ta med regnkläder och stövlar. Total mängd: 3.7 mm. Minst totalt 1.5 mm och som mest 5.0 mm under dagen.
+2025-08-29 15:38:31,569 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 15:38:31,569 - main - INFO - Genererade rekommendationer: Det blir kallt. Max 1.0°C. Ta varm jacka och överdragsbyxor. Det blir kallt (min -2.0°C), ta overall, mössa och dubbla vantar.
+2025-08-29 15:44:30,308 - __main__ - INFO - Programmet startas.
+2025-08-29 15:44:30,309 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 15:44:30,921 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 15:44:30,931 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 16:00:24,215 - __main__ - INFO - Programmet startas.
+2025-08-29 16:00:24,215 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 16:00:25,031 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 16:00:25,036 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 16:00:25,037 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.1), smörj in dig med solkräm och ta med en keps.
+2025-08-29 16:00:25,123 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-29 16:00:25,123 - __main__ - INFO - Programmet avslutas.
+2025-08-29 23:30:49,888 - __main__ - INFO - Programmet startas.
+2025-08-29 23:30:49,890 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 23:30:50,834 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 23:30:50,843 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 23:30:50,843 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.3°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.1), smörj in dig med solkräm och ta med en keps.
+2025-08-29 23:30:50,871 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-29 23:30:50,966 - __main__ - ERROR - Kunde inte skicka notis via Pushover: name 'atj9g58pwradc76gfohsi9x984uaxj' is not defined
+2025-08-29 23:30:50,968 - __main__ - INFO - Programmet avslutas.
+2025-08-29 23:36:05,145 - __main__ - INFO - Programmet startas.
+2025-08-29 23:36:05,145 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 23:36:05,715 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 23:36:05,720 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 23:36:05,720 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.3°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.1), smörj in dig med solkräm och ta med en keps.
+2025-08-29 23:36:05,733 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-29 23:36:06,685 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-08-29 23:36:06,690 - __main__ - INFO - Programmet avslutas.
+2025-08-29 23:47:41,453 - __main__ - INFO - Programmet startas.
+2025-08-29 23:47:41,453 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 23:47:42,003 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 23:47:42,006 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 23:47:42,006 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.3°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.1), smörj in dig med solkräm och ta med en keps.
+2025-08-29 23:47:42,017 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-29 23:47:42,778 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-08-29 23:47:42,784 - __main__ - INFO - Programmet avslutas.
+2025-08-29 23:52:21,427 - __main__ - INFO - Programmet startas.
+2025-08-29 23:52:21,427 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-29 23:52:21,911 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-29 23:52:21,914 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-29 23:52:21,914 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.3°C och lägst 14.5°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.1), smörj in dig med solkräm och ta med en keps.
+2025-08-29 23:52:21,926 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-29 23:52:22,605 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-08-29 23:52:22,611 - __main__ - INFO - Programmet avslutas.
+2025-08-30 00:43:39,039 - __main__ - INFO - Programmet startas.
+2025-08-30 00:43:39,039 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-08-30 00:43:39,714 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-08-30 00:43:39,724 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-08-30 00:43:39,725 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.3°C och lägst 14.5°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.0), smörj in dig med solkräm och ta med en keps.
+2025-08-30 00:43:39,743 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-08-30 00:43:40,531 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-08-30 00:43:40,536 - __main__ - INFO - Programmet avslutas.
+2025-09-01 11:28:30,098 - __main__ - INFO - Programmet startas.
+2025-09-01 11:28:30,098 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 11:28:30,870 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 11:28:30,881 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 11:28:30,881 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 11:28:30,908 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 11:28:31,868 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 11:28:31,870 - __main__ - INFO - Programmet avslutas.
+2025-09-01 11:52:08,487 - __main__ - INFO - Programmet startas.
+2025-09-01 11:52:08,488 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 11:52:09,064 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 11:52:09,067 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 11:52:09,067 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 11:52:09,078 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 11:52:09,998 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 11:52:10,001 - __main__ - INFO - Programmet avslutas.
+2025-09-01 12:38:28,246 - __main__ - INFO - Programmet startas.
+2025-09-01 12:38:28,246 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 12:38:28,987 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 12:38:28,993 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 12:38:28,993 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 12:38:29,009 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 12:38:29,716 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 12:38:29,724 - __main__ - INFO - Programmet avslutas.
+2025-09-01 12:44:09,325 - __main__ - INFO - Programmet startas.
+2025-09-01 12:44:09,326 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 12:44:10,087 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 12:44:10,092 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 12:44:10,092 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 12:44:10,117 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 12:44:10,603 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 12:44:10,607 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:02:51,121 - __main__ - INFO - Programmet startas.
+2025-09-01 13:02:51,121 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:02:51,832 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:02:51,838 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:02:51,839 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 13:02:51,859 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:02:52,813 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:02:52,816 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:04:00,804 - __main__ - INFO - Programmet startas.
+2025-09-01 13:04:00,805 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:04:01,339 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:04:01,343 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:04:01,343 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 13:04:01,355 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:04:02,062 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:04:02,065 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:08:27,037 - __main__ - INFO - Programmet startas.
+2025-09-01 13:08:27,037 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:08:27,665 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:08:27,668 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:08:27,668 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 23.3°C och lägst 17.1°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (3.3), smörj in dig med solkräm och ta med en keps.
+2025-09-01 13:08:27,701 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:08:28,682 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:08:28,688 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:08:46,207 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:08:46,207 - main - INFO - Genererade rekommendationer: Det blir varmt! Max 26.0°C och lägst 25.0°C. Klä dig i shorts och t-shirt. UV-indexet blir högt (5.0), smörj in dig med solkräm och ta med en keps.
+2025-09-01 13:08:46,210 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:08:46,210 - main - INFO - Genererade rekommendationer: Det blir svalt. Max 12.0°C och lägst 10.0°C. Ta med dunjacka och mössa. Det kan regna under dagen. Ta med regnkläder och stövlar. Total mängd: 3.7 mm. Minst totalt 1.5 mm och som mest 5.0 mm under dagen.
+2025-09-01 13:08:46,212 - main - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:08:46,213 - main - INFO - Genererade rekommendationer: Det blir kallt. Max 1.0°C och lägst -2.0°C. Ta varm jacka och överdragsbyxor. Det blir kallt lägst -2.0°C och högsta 1.0°C. Ta overall, mössa och dubbla vantar.
+2025-09-01 13:16:57,355 - __main__ - INFO - Programmet startas.
+2025-09-01 13:16:57,356 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:16:58,115 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:16:58,121 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:16:58,121 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Max 22.2°C och lägst 17.1°C. Klä dig i shorts och t-shirt. Det kan regna under dagen. Ta med regnkläder och stövlar. Total mängd: 0.9 mm. Minst totalt 0.0 mm och som mest 7.4 mm under dagen. UV-indexet blir högt (4.1), smörj in dig med solkräm och ta med en keps.
+2025-09-01 13:16:58,161 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:16:58,580 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:16:58,583 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:37:48,656 - __main__ - INFO - Programmet startas.
+2025-09-01 13:37:48,656 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:37:49,287 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:37:49,296 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:37:49,297 - __main__ - INFO - Genererade rekommendationer: Dagens väderprognos: max 23.3°C och min 17.0°C. UV-indexet blir högst 3.3. Nederbörd: 0.0 mm. Minst totalt 0.0 mm och som mest 0.8 mm under dagen. Det blir varmt! Max 23.3°C och lägst 17.0°C. Klä dig i shorts och t-shirt.
+2025-09-01 13:37:49,322 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:37:50,249 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:37:50,254 - __main__ - INFO - Programmet avslutas.
+2025-09-01 13:51:03,316 - __main__ - INFO - Programmet startas.
+2025-09-01 13:51:03,316 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 13:51:04,134 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 13:51:04,138 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 13:51:04,139 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Klä dig i shorts och t-shirt.
+2025-09-01 13:51:04,151 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 13:51:24,509 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 13:51:24,513 - __main__ - INFO - Programmet avslutas.
+2025-09-01 14:00:01,108 - __main__ - INFO - Programmet startas.
+2025-09-01 14:00:01,108 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 14:00:01,641 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 14:00:01,648 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 14:00:01,648 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Klä dig i shorts och t-shirt.
+
+---
+
+Dagens väderprognos:
+Max: 23.3°C
+Min: 17.0°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (min 0.0 mm, max 0.8 mm)
+2025-09-01 14:00:01,667 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 14:00:03,373 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 14:00:03,378 - __main__ - INFO - Programmet avslutas.
+2025-09-01 14:01:49,730 - __main__ - INFO - Programmet startas.
+2025-09-01 14:01:49,730 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 14:01:50,336 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 14:01:50,346 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 14:01:50,347 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Klä dig i shorts och t-shirt.
+Dagens väderprognos:
+Max: 23.3°C
+Min: 17.0°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (min 0.0 mm, max 0.8 mm)
+2025-09-01 14:01:50,400 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 14:01:51,285 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 14:01:51,289 - __main__ - INFO - Programmet avslutas.
+2025-09-01 14:02:14,636 - __main__ - INFO - Programmet startas.
+2025-09-01 14:02:14,637 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 14:02:15,281 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 14:02:15,291 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 14:02:15,292 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Klä dig i shorts och t-shirt.
+
+Dagens väderprognos:
+Max: 23.3°C
+Min: 17.0°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (min 0.0 mm, max 0.8 mm)
+2025-09-01 14:02:15,312 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 14:02:15,768 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 14:02:15,771 - __main__ - INFO - Programmet avslutas.
+2025-09-01 14:04:20,526 - __main__ - INFO - Programmet startas.
+2025-09-01 14:04:20,526 - __main__ - INFO - Försöker hämta väderdata från YR API...
+2025-09-01 14:04:21,152 - __main__ - INFO - Väderdata hämtad framgångsrikt.
+2025-09-01 14:04:21,159 - __main__ - INFO - Bearbetar väderdata för 08:00-17:00.
+2025-09-01 14:04:21,160 - __main__ - INFO - Genererade rekommendationer: Det blir varmt! Klä dig i shorts och t-shirt.
+
+Dagens väderprognos:
+Max: 23.3°C
+Min: 17.0°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (0.0 till 0.8 mm)
+2025-09-01 14:04:21,187 - __main__ - INFO - Dagens rekommendation sparad i databasen.
+2025-09-01 14:04:22,042 - __main__ - INFO - Notis skickad framgångsrikt via Pushover.
+2025-09-01 14:04:22,045 - __main__ - INFO - Programmet avslutas.
