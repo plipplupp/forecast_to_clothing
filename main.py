@@ -5,50 +5,71 @@ import sqlite3
 import http.client, urllib.parse
 import os
 from dotenv import load_dotenv
+import configparser
+import json
 
-# Load variables from the .env file
+# --- Setup and Configuration ---
+# Loads variables from the .env file and sets up the logger for output to a file.
 load_dotenv()
-
-# Create a logger instance for this module
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-
-# Create a file handler that logs messages to 'logfile.log'
 file_handler = logging.FileHandler('logfile.log')
 file_handler.setLevel(logging.INFO)
-
-# Create a formatter for the log messages
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
-
-# Add the handler to the logger instance
 logger.addHandler(file_handler)
 
-# API URL and coordinates
+# YR API endpoint
 API_URL = "https://api.met.no/weatherapi/locationforecast/2.0/complete.json"
-LATITUDE = 59.879698
-LONGITUDE = 17.634381
 
-def get_weather_data():
-    """Fetches weather data from YR's API."""
+def load_config():
+    """
+    Loads configuration settings from config.ini.
+    Provides default values if the file or sections are missing.
+    """
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    
+    # Set default values for weather and clothing recommendation sections
+    if 'weather' not in config:
+        config['weather'] = {
+            'latitude': '59.879698',
+            'longitude': '17.634381'
+        }
+    if 'clothing_recommendations' not in config:
+        config['clothing_recommendations'] = {
+            'check_forecast_at_night': 'false',
+            'start_hour': '8',
+            'end_hour': '17'
+        }
+        
+    return config
+
+# --- Core Program Logic ---
+def get_weather_data(latitude, longitude):
+    """
+    Fetches weather data from YR's API for the specified coordinates.
+    The 'User-Agent' header is required by the API's usage policy.
+    """
     try:
         logger.info("Attempting to fetch weather data from YR API...")
         response = requests.get(
             API_URL,
-            params={'lat': LATITUDE, 'lon': LONGITUDE},
+            params={'lat': latitude, 'lon': longitude},
             headers={'User-Agent': 'PythonAppForecastToClothing/1.0'}
         )
-        response.raise_for_status()
+        response.raise_for_status()  # Raises an HTTPError for bad responses (4xx or 5xx)
         logger.info("Weather data fetched successfully.")
         return response.json()
     except requests.exceptions.RequestException as e:
         logger.error(f"Error fetching weather data: {e}")
         return None
 
-def process_weather_data(data):
+def process_weather_data(data, start_hour, end_hour):
     """
-    Processes the weather data for the time period 08:00-17:00 and generates clothing suggestions.
-    Returns a string with the recommendations.
+    Processes the weather data to find max/min temperatures, rain, UV index,
+    and checks for conditions that cause dew point warnings.
+    Generates a string with clothing recommendations based on these values.
     """
     if not data or 'timeseries' not in data['properties']:
         logger.warning("No weather data to process or invalid format.")
@@ -65,28 +86,42 @@ def process_weather_data(data):
     total_max_rain_amount = 0
     
     max_uv_index = 0
+    has_dew_point_warning = False
 
-    logger.info("Processing weather data for 08:00-17:00.")
-
+    logger.info(f"Processing weather data for {start_hour}:00-{end_hour}:00.")
+    logger.info(f"Antal tidsstämplar i datan: {len(data['properties']['timeseries'])}")
+    
+    # Loop through all hourly forecast data points
     for timeslot in data['properties']['timeseries']:
         time_str = timeslot['time']
         time_utc = datetime.datetime.fromisoformat(time_str.replace('Z', '+00:00'))
-        
-        if 8 <= time_utc.hour < 17:
+
+        # Process dew point data for the morning hours regardless of the main time period
+        if 6 <= time_utc.hour < 9:
+            details = timeslot['data'].get('instant', {}).get('details', {})
+            temp_at_dawn = details.get('air_temperature')
+            dew_point_at_dawn = details.get('dew_point_temperature')
+            
+            if temp_at_dawn is not None and dew_point_at_dawn is not None:
+                if temp_at_dawn <= dew_point_at_dawn + 1.5:
+                    has_dew_point_warning = True
+
+        # Only process data within the specified time range for recommendations
+        if start_hour <= time_utc.hour < end_hour:
             details = timeslot['data'].get('instant', {}).get('details', {})
             details_1h = timeslot['data'].get('next_1_hours', {}).get('details', {})
             
             temp = details.get('air_temperature')
             uv_index = details.get('ultraviolet_index_clear_sky')
-            
             rain_amount = details_1h.get('precipitation_amount', 0)
             min_rain_amount = details_1h.get('precipitation_amount_min', 0)
             max_rain_amount = details_1h.get('precipitation_amount_max', 0)
             
-            if temp is not None and temp > max_temp:
-                max_temp = temp
-            if temp is not None and temp < min_temp:
-                min_temp = temp
+            if temp is not None:
+                if temp > max_temp:
+                    max_temp = temp
+                if temp < min_temp:
+                    min_temp = temp
             
             total_rain_amount += rain_amount
             total_min_rain_amount += min_rain_amount
@@ -94,44 +129,42 @@ def process_weather_data(data):
             
             if rain_amount > 0:
                 will_it_rain = True
-            
             if uv_index is not None and uv_index > max_uv_index:
                 max_uv_index = uv_index
     
-    # Generate clothing suggestions based on the compiled values
-    recommendations = []
-    
-    # Recommendations based on both max and min
+    # Build recommendations based on collected data
     if max_temp >= 20 and min_temp >= 15:
-        recommendations.append(f"Det blir varmt! Klä dig i shorts och t-shirt.")
+        recommendations.append(f"• Det blir varmt! Klä dig i shorts och t-shirt.")
     elif max_temp >= 20 and min_temp < 15:
-        recommendations.append(f"Det blir varmt och svalt. Klä dig i shorts och t-shirt och ta med en tunn jacka.")
+        recommendations.append(f"• Det blir varmt och svalt. Klä dig i shorts och t-shirt och ta med en tunn jacka.")
     elif max_temp >= 15 and max_temp < 20:
-        recommendations.append(f"Ta med en tunn jacka, det blir svalt i skuggan.")
+        recommendations.append(f"• Ta med en tunn jacka, det blir svalt i skuggan.")
     elif max_temp >= 5 and max_temp < 15:
-        recommendations.append(f"Det blir svalt. Ta med dunjacka och mössa.")
+        recommendations.append(f"• Det blir svalt. Ta med dunjacka och mössa.")
     elif max_temp < 5:
-        recommendations.append(f"Det blir kallt. Ta varm jacka och överdragsbyxor.")
+        recommendations.append(f"• Det blir kallt. Ta varm jacka och överdragsbyxor.")
 
-    # Recommendations based solely on min-temp
     if min_temp <= 15 and min_temp > 7:
-        recommendations.append("Det blir svalt. Ta med dunjacka och mössa.")
+        recommendations.append("• Det blir svalt. Ta med dunjacka och mössa.")
     if min_temp <= 7 and min_temp > 3:
-        recommendations.append("Det kan bli kyligt. Ta med dunjacka, tunna vantar och mössa.")
+        recommendations.append("• Det kan bli kyligt. Ta med dunjacka, tunna vantar och mössa.")
     elif min_temp <= 3 and min_temp > 0:
-        recommendations.append("Det kan bli kallt. Ta med varm jacka, överdragsbyxor,varma vantar och mössa.")
+        recommendations.append("• Det kan bli kallt. Ta med varm jacka, överdragsbyxor,varma vantar och mössa.")
     elif min_temp <= 0:
-        recommendations.append("Det blir kallt. Ta overall, mössa och dubbla vantar.")
+        recommendations.append("• Det blir kallt. Ta overall, mössa och dubbla vantar.")
 
-    # Recommendation for UV-index
-    if max_uv_index > 3:
-        recommendations.append(f"Använd solskydd!")
-      
-    # Recommendation for rain
-    if will_it_rain:
-        recommendations.append(f"Det kan regna under dagen. Ta med regnkläder och stövlar.")
+    if has_dew_point_warning:
+        recommendations.append("• Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.")
     
-    # Summary
+    if max_uv_index > 3:
+        recommendations.append(f"• Använd solskydd!")
+      
+    if total_min_rain_amount > 0:
+        will_it_rain = True
+
+    if will_it_rain:
+        recommendations.append(f"• Det kan regna under dagen. Ta med regnkläder och stövlar.")
+    
     total_regn = round(total_rain_amount, 1)
     min_total_regn = round(total_min_rain_amount, 1)
     max_total_regn = round(total_max_rain_amount, 1)
@@ -143,11 +176,12 @@ def process_weather_data(data):
                f"UV-index: {max_uv_index}\n"
                f"Nederbörd: {total_regn} mm ({min_total_regn} till {max_total_regn} mm)")
 
-    # Join all recommendations into a string
     final_recommendation = "\n".join(recommendations) + summary
     logger.info(f"Generated recommendations: {final_recommendation}")
+    logger.info(f"Antal tidsstämplar i datan: {len(data['properties']['timeseries'])}")
     return final_recommendation
 
+# --- Data Handling and Notifications ---
 def save_to_database(recommendation):
     """Saves today's clothing suggestion to a SQLite database."""
     try:
@@ -176,7 +210,6 @@ def save_to_database(recommendation):
 
 def send_pushover_notification(message):
     """Sends a message via Pushover using built-in modules."""
-    # Read keys from environment variables
     APP_TOKEN = os.getenv("PUSHOVER_APP_TOKEN")
     USER_KEY = os.getenv("PUSHOVER_USER_KEY")
 
@@ -202,11 +235,31 @@ def send_pushover_notification(message):
     except Exception as e:
         logger.error(f"Could not send notification via Pushover: {e}")
 
+# --- Main Program Execution ---
 if __name__ == "__main__":
     logger.info("Program started.")
-    weather_json = get_weather_data()
+    
+    # Load configuration settings from the config.ini file
+    config = load_config()
+    
+    # Retrieve values from the configuration
+    LATITUDE = config['weather'].getfloat('latitude')
+    LONGITUDE = config['weather'].getfloat('longitude')
+    START_HOUR = config['clothing_recommendations'].getint('start_hour')
+    END_HOUR = config['clothing_recommendations'].getint('end_hour')
+    
+    # Fetch weather data and process it
+    weather_json = get_weather_data(LATITUDE, LONGITUDE)
+    
+    # # Prints raw data
+    # print("--- Rådata från YR-API:et (endast de första 2000 tecknen för att spara utrymme, ändar för att se mer) ---")
+    # print(json.dumps(weather_json, indent=2)[:200000])
+    # print("...")
+    # print("----------------------------------------------------------------------------------\n")
+    
     if weather_json:
-        recommendation_text = process_weather_data(weather_json)
+        recommendation_text = process_weather_data(weather_json, START_HOUR, END_HOUR)
         save_to_database(recommendation_text)
         send_pushover_notification(recommendation_text)
+    
     logger.info("Program finished.")

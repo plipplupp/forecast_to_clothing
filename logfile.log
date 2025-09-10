@@ -219,3 +219,278 @@ Nederbörd: 0.0 mm (0.0 till 0.9 mm)
 2025-09-01 15:50:49,789 - __main__ - INFO - Today's recommendation saved to the database.
 2025-09-01 15:50:50,581 - __main__ - INFO - Notification sent successfully via Pushover.
 2025-09-01 15:50:50,582 - __main__ - INFO - Program finished.
+2025-09-02 10:01:00,886 - __main__ - INFO - Program started.
+2025-09-02 10:01:00,887 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-02 10:01:01,589 - __main__ - INFO - Weather data fetched successfully.
+2025-09-02 10:01:01,592 - __main__ - INFO - Processing weather data for 08:00-17:00.
+2025-09-02 10:01:01,593 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Använd solskydd!
+
+Dagens väderprognos:
+Max: 22.8°C
+Min: 17.0°C
+UV-index: 3.7
+Nederbörd: 0.0 mm (0.0 till 0.3 mm)
+2025-09-02 10:01:01,619 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-02 10:01:02,606 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-02 10:01:02,610 - __main__ - INFO - Program finished.
+2025-09-09 09:08:30,747 - __main__ - INFO - Program started.
+2025-09-09 09:08:30,748 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-09 09:08:32,169 - __main__ - INFO - Weather data fetched successfully.
+2025-09-09 09:08:32,185 - __main__ - INFO - Processing weather data for 08:00-17:00.
+2025-09-09 09:08:32,186 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Använd solskydd!
+
+Dagens väderprognos:
+Max: 22.3°C
+Min: 16.6°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (0.0 till 1.5 mm)
+2025-09-09 09:08:32,219 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-09 09:08:33,387 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-09 09:08:33,403 - __main__ - INFO - Program finished.
+2025-09-09 11:13:45,768 - __main__ - INFO - Program started.
+2025-09-09 11:13:45,769 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-09 11:13:46,538 - __main__ - INFO - Weather data fetched successfully.
+2025-09-09 11:13:46,543 - __main__ - INFO - Processing weather data for 08:00-17:00.
+2025-09-09 11:13:46,543 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Använd solskydd!
+
+Dagens väderprognos:
+Max: 22.5°C
+Min: 16.9°C
+UV-index: 3.3
+Nederbörd: 0.0 mm (0.0 till 1.5 mm)
+2025-09-09 11:13:46,562 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-09 11:13:46,988 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-09 11:13:46,994 - __main__ - INFO - Program finished.
+2025-09-09 22:08:54,923 - __main__ - INFO - Program started.
+2025-09-09 22:08:54,924 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-09 22:08:55,810 - __main__ - INFO - Weather data fetched successfully.
+2025-09-09 22:08:55,813 - __main__ - INFO - Processing weather data.
+2025-09-09 22:08:55,814 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+
+Dagens väderprognos:
+Max: 22.8°C
+Min: 18.5°C
+UV-index: 3.0
+Nederbörd: 0.0 mm (0.0 till 0.5 mm)
+2025-09-09 22:08:55,846 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-09 22:08:56,269 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-09 22:08:56,275 - __main__ - INFO - Program finished.
+2025-09-09 22:31:14,842 - __main__ - INFO - Program started.
+2025-09-09 22:31:14,843 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-09 22:31:15,899 - __main__ - INFO - Weather data fetched successfully.
+2025-09-09 22:31:15,906 - __main__ - INFO - Processing weather data for 8:00-17:00.
+2025-09-09 22:31:15,906 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.8°C
+Min: 16.0°C
+UV-index: 3.0
+Nederbörd: 6.5 mm (0.9 till 13.7 mm)
+2025-09-09 22:31:15,943 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-09 22:31:16,916 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-09 22:31:16,923 - __main__ - INFO - Program finished.
+2025-09-10 08:17:00,428 - __main__ - INFO - Program started.
+2025-09-10 08:17:00,429 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 08:17:01,880 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 08:17:01,886 - __main__ - INFO - Processing weather data for 8:00-17:00.
+2025-09-10 08:17:01,887 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.3°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 2.4 mm (0.0 till 9.3 mm)
+2025-09-10 08:17:01,909 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 08:17:02,435 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 08:17:02,438 - __main__ - INFO - Program finished.
+2025-09-10 10:26:48,133 - __main__ - INFO - Program started.
+2025-09-10 10:26:48,138 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 10:26:49,145 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 10:26:49,160 - __main__ - INFO - Processing weather data for 8:00-17:00.
+2025-09-10 10:26:49,161 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.9°C
+Min: 16.2°C
+UV-index: 3.1
+Nederbörd: 2.6 mm (0.1 till 9.5 mm)
+2025-09-10 10:26:49,205 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 10:26:49,596 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 10:26:49,604 - __main__ - INFO - Program finished.
+2025-09-10 10:27:41,755 - __main__ - INFO - Program started.
+2025-09-10 10:27:41,756 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 10:27:42,339 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 10:27:42,350 - __main__ - INFO - Processing weather data for 8:00-17:00.
+2025-09-10 10:27:42,351 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.9°C
+Min: 16.2°C
+UV-index: 3.1
+Nederbörd: 2.6 mm (0.1 till 9.5 mm)
+2025-09-10 10:27:42,370 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 10:27:42,796 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 10:27:42,801 - __main__ - INFO - Program finished.
+2025-09-10 10:33:47,262 - __main__ - INFO - Program started.
+2025-09-10 10:33:47,263 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 10:33:48,024 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 10:33:48,038 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 10:33:48,039 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.9°C
+Min: 16.2°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 10:33:48,072 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 10:33:48,472 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 10:33:48,474 - __main__ - INFO - Program finished.
+2025-09-10 10:42:14,900 - __main__ - INFO - Program started.
+2025-09-10 10:42:14,901 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 10:42:15,679 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 10:42:15,685 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 10:42:15,691 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.9°C
+Min: 16.2°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 10:42:15,703 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 10:42:16,195 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 10:42:16,201 - __main__ - INFO - Program finished.
+2025-09-10 10:47:12,221 - __main__ - INFO - Program started.
+2025-09-10 10:47:12,222 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 10:47:13,023 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 10:47:13,026 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 10:47:13,026 - __main__ - INFO - Antal tidsstämplar i datan: 84
+2025-09-10 10:47:13,033 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 22.9°C
+Min: 16.2°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 10:47:13,033 - __main__ - INFO - Antal tidsstämplar i datan: 84
+2025-09-10 10:47:13,046 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 10:47:13,421 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 10:47:13,425 - __main__ - INFO - Program finished.
+2025-09-10 11:02:05,683 - __main__ - INFO - Program started.
+2025-09-10 11:02:05,684 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 11:02:06,536 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 11:02:06,543 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 11:02:06,543 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:02:06,544 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 23.5°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 11:02:06,544 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:02:06,556 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 11:02:06,957 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 11:02:06,964 - __main__ - INFO - Program finished.
+2025-09-10 11:24:02,951 - __main__ - INFO - Program started.
+2025-09-10 11:24:02,953 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 11:24:03,727 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 11:24:03,760 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 11:24:03,761 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:24:03,762 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 23.5°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 11:24:03,763 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:24:03,780 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 11:24:04,270 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 11:24:04,278 - __main__ - INFO - Program finished.
+2025-09-10 11:25:42,578 - __main__ - INFO - Program started.
+2025-09-10 11:25:42,579 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 11:25:43,153 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 11:25:43,222 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 11:25:43,222 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:25:43,222 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 23.5°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 11:25:43,222 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:25:43,250 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 11:25:43,663 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 11:25:43,670 - __main__ - INFO - Program finished.
+2025-09-10 11:27:48,242 - __main__ - INFO - Program started.
+2025-09-10 11:27:48,243 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 11:27:48,843 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 11:27:49,118 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 11:27:49,118 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:27:49,118 - __main__ - INFO - Generated recommendations: Det blir varmt! Klä dig i shorts och t-shirt.
+Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+Använd solskydd!
+Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 23.5°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 1.4 mm (0.0 till 6.0 mm)
+2025-09-10 11:27:49,119 - __main__ - INFO - Antal tidsstämplar i datan: 83
+2025-09-10 11:27:49,130 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 11:27:49,929 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 11:27:49,931 - __main__ - INFO - Program finished.
+2025-09-10 11:40:41,471 - __main__ - INFO - Program started.
+2025-09-10 11:40:41,472 - __main__ - INFO - Attempting to fetch weather data from YR API...
+2025-09-10 11:40:42,184 - __main__ - INFO - Weather data fetched successfully.
+2025-09-10 11:40:42,192 - __main__ - INFO - Processing weather data for 8:00-16:00.
+2025-09-10 11:40:42,192 - __main__ - INFO - Antal tidsstämplar i datan: 88
+2025-09-10 11:40:42,193 - __main__ - INFO - Generated recommendations: • Det blir varmt! Klä dig i shorts och t-shirt.
+• Det är fuktigt i gräset på morgonen. Ta med stövlar och byxor som tål fukt.
+• Använd solskydd!
+• Det kan regna under dagen. Ta med regnkläder och stövlar.
+
+Dagens väderprognos:
+Max: 23.3°C
+Min: 16.1°C
+UV-index: 3.1
+Nederbörd: 2.1 mm (0.0 till 7.8 mm)
+2025-09-10 11:40:42,195 - __main__ - INFO - Antal tidsstämplar i datan: 88
+2025-09-10 11:40:42,205 - __main__ - INFO - Today's recommendation saved to the database.
+2025-09-10 11:40:42,571 - __main__ - INFO - Notification sent successfully via Pushover.
+2025-09-10 11:40:42,577 - __main__ - INFO - Program finished.
